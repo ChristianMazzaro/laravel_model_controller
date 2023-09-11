@@ -1,8 +1,8 @@
 @extends('layouts.main')
 
-@section('page-title','movies')
+@section('page_title','movies')
 
-@section('main-content')
+@section('main_content')
 
 <div class="container">
     <div class="row mb-5">
