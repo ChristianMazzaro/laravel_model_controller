@@ -2,6 +2,9 @@
 
 use Illuminate\Support\Facades\Route;
 
+//controllers
+use App\Http\Controllers\Guest\MovieController; 
+
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -12,7 +15,10 @@ use Illuminate\Support\Facades\Route;
 | be assigned to the "web" middleware group. Make something great!
 |
 */
+Route::get('/movies/{id}', [MovieController::class,'show'])->name('movies.show');
+
+Route::get('/movies', [MovieController::class,'index'])->name('movies.index');
 
 Route::get('/', function () {
-    return view('welcome');
+    return view('homePage');
 });
